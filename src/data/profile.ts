@@ -36,7 +36,7 @@ export const profileData: ProfileData = {
   location: "India",
   github: "https://github.com/Vinay019-code",
   linkedin: "https://www.linkedin.com/in/vinay-yadav",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Vinay_Yadav%20correct_Resume.pdf",
   education: {
     degree: "Bachelor of Technology (B.Tech)",
     field: "Computer Science & Engineering",
