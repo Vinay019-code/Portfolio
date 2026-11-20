@@ -108,11 +108,11 @@ export default function PortfolioAssistant() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="flex items-center gap-2.5 px-4 py-3 rounded-full bg-zinc-900 border border-white/15 text-white hover:border-[#8B5CF6] hover:bg-zinc-800 transition-all shadow-2xl backdrop-blur-md group"
+          className="flex items-center gap-2.5 px-4 py-3 rounded-full bg-zinc-900 border border-white/15 text-[#EEEEEE] hover:border-[#167D8D] hover:bg-zinc-800 transition-all shadow-2xl backdrop-blur-md group"
           aria-label="Ask about Vinay"
         >
-          <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <Terminal className="w-4 h-4 text-[#8B5CF6]" />
+          <div className="w-2 h-2 rounded-full bg-[#B9E4E8] animate-pulse" />
+          <Terminal className="w-4 h-4 text-[#B9E4E8]" />
           <span className="text-xs font-mono font-medium tracking-wide">
             Ask about Vinay
           </span>
@@ -121,15 +121,15 @@ export default function PortfolioAssistant() {
 
       {/* Chat Assistant Panel */}
       {isOpen && (
-        <div className="w-[90vw] sm:w-[400px] h-[520px] max-h-[85vh] rounded-2xl border border-white/10 bg-zinc-950/95 shadow-2xl backdrop-blur-xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
+        <div className="w-[90vw] sm:w-[400px] h-[520px] max-h-[85vh] rounded-2xl border border-white/10 bg-[#071B2B]/95 shadow-2xl backdrop-blur-xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
           {/* Header */}
-          <div className="p-4 border-b border-white/10 bg-zinc-900/60 flex items-center justify-between">
+          <div className="p-4 border-b border-white/10 bg-[#071B2B]/80 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="p-1.5 rounded-lg bg-[#8B5CF6]/10 text-[#8B5CF6]">
+              <div className="p-1.5 rounded-lg bg-[#167D8D]/20 text-[#B9E4E8]">
                 <Bot className="w-4 h-4" />
               </div>
               <div>
-                <h4 className="text-xs font-mono font-bold text-white uppercase tracking-wider">
+                <h4 className="text-xs font-mono font-bold text-[#EEEEEE] uppercase tracking-wider">
                   Portfolio Assistant
                 </h4>
                 <p className="text-[10px] font-mono text-zinc-400">
@@ -157,14 +157,14 @@ export default function PortfolioAssistant() {
                 }`}
               >
                 {msg.sender === "assistant" && (
-                  <div className="w-6 h-6 rounded-full bg-zinc-900 border border-white/10 flex items-center justify-center shrink-0 mt-0.5 text-[#8B5CF6]">
+                  <div className="w-6 h-6 rounded-full bg-zinc-900 border border-white/10 flex items-center justify-center shrink-0 mt-0.5 text-[#B9E4E8]">
                     <Bot className="w-3.5 h-3.5" />
                   </div>
                 )}
                 <div
                   className={`p-3 rounded-xl max-w-[85%] leading-relaxed whitespace-pre-line ${
                     msg.sender === "user"
-                      ? "bg-white text-black font-sans text-xs font-medium ml-auto"
+                      ? "bg-[#EEEEEE] text-[#071B2B] font-sans text-xs font-medium ml-auto"
                       : "bg-zinc-900/90 text-zinc-300 border border-white/5"
                   }`}
                 >
@@ -176,13 +176,13 @@ export default function PortfolioAssistant() {
           </div>
 
           {/* Quick preset questions */}
-          <div className="p-2 border-t border-white/5 bg-zinc-950/80">
+          <div className="p-2 border-t border-white/5 bg-[#071B2B]/90">
             <div className="flex gap-1.5 overflow-x-auto pb-1 scrollbar-none text-[11px] font-mono">
               {PRESET_QUESTIONS.map((q) => (
                 <button
                   key={q}
                   onClick={() => handleSend(q)}
-                  className="px-2.5 py-1 rounded-full bg-zinc-900 border border-white/5 text-zinc-400 hover:text-white hover:border-[#8B5CF6]/50 whitespace-nowrap transition-colors shrink-0"
+                  className="px-2.5 py-1 rounded-full bg-zinc-900 border border-white/5 text-zinc-400 hover:text-[#B9E4E8] hover:border-[#167D8D] whitespace-nowrap transition-colors shrink-0"
                 >
                   {q}
                 </button>
@@ -196,18 +196,18 @@ export default function PortfolioAssistant() {
               e.preventDefault();
               handleSend(inputValue);
             }}
-            className="p-3 border-t border-white/10 bg-zinc-900/50 flex items-center gap-2"
+            className="p-3 border-t border-white/10 bg-[#071B2B]/70 flex items-center gap-2"
           >
             <input
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               placeholder="Ask a question..."
-              className="flex-1 px-3 py-2 rounded-lg bg-zinc-950 border border-white/10 text-white placeholder-zinc-600 text-xs font-mono focus:outline-none focus:border-[#8B5CF6]"
+              className="flex-1 px-3 py-2 rounded-lg bg-zinc-950 border border-white/10 text-[#EEEEEE] placeholder-zinc-600 text-xs font-mono focus:outline-none focus:border-[#167D8D]"
             />
             <button
               type="submit"
-              className="p-2 rounded-lg bg-[#8B5CF6] text-white hover:bg-[#7C3AED] transition-colors"
+              className="p-2 rounded-lg bg-[#167D8D] text-[#EEEEEE] hover:bg-[#167D8D]/80 transition-colors"
               aria-label="Send query"
             >
               <Send className="w-3.5 h-3.5" />

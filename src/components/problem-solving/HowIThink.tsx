@@ -77,7 +77,7 @@ export default function HowIThink() {
       className="py-24 px-6 sm:px-8 max-w-7xl mx-auto border-t border-white/5 relative"
     >
       {/* Section Tag */}
-      <div className="flex items-center gap-2 mb-4 font-mono text-xs text-[#8B5CF6] tracking-widest uppercase">
+      <div className="flex items-center gap-2 mb-4 font-mono text-xs text-[#B9E4E8] tracking-widest uppercase">
         <span>04</span>
         <span>/</span>
         <span>METHODOLOGY & DSA</span>
@@ -85,7 +85,7 @@ export default function HowIThink() {
 
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
         <div>
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#EEEEEE] leading-tight">
             How I Think
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base mt-2 max-w-xl">
@@ -96,7 +96,7 @@ export default function HowIThink() {
 
         <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-zinc-900 border border-white/10 text-xs font-mono text-zinc-300">
           <span>Primary Language:</span>
-          <span className="text-emerald-400 font-bold">{profileData.primaryDsaLanguage}</span>
+          <span className="text-[#B9E4E8] font-bold">{profileData.primaryDsaLanguage}</span>
         </div>
       </div>
 
@@ -108,18 +108,18 @@ export default function HowIThink() {
         {lifecycle.map((step, idx) => (
           <div
             key={step.name}
-            className="p-5 rounded-xl border border-white/10 bg-zinc-950/60 backdrop-blur-sm relative group hover:border-[#8B5CF6]/50 transition-all flex flex-col justify-between"
+            className="p-5 rounded-xl border border-white/10 bg-[#071B2B]/60 backdrop-blur-sm relative group hover:border-[#167D8D] transition-all flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="font-mono text-xs text-[#8B5CF6] font-bold">
+                <span className="font-mono text-xs text-[#B9E4E8] font-bold">
                   {step.stage}
                 </span>
                 <span className="text-[10px] font-mono text-zinc-500 uppercase">
                   PHASE
                 </span>
               </div>
-              <h3 className="text-base font-bold text-white mb-2">{step.name}</h3>
+              <h3 className="text-base font-bold text-[#EEEEEE] mb-2">{step.name}</h3>
               <p className="text-xs text-zinc-400 leading-relaxed font-normal">
                 {step.desc}
               </p>
@@ -135,13 +135,13 @@ export default function HowIThink() {
       </div>
 
       {/* DSA Pattern Topics from Resume */}
-      <div className="p-6 sm:p-8 rounded-2xl border border-white/10 bg-zinc-950/40 backdrop-blur-sm">
+      <div className="p-6 sm:p-8 rounded-2xl border border-white/10 bg-[#071B2B]/40 backdrop-blur-sm">
         <div className="flex items-center justify-between pb-4 border-b border-white/5 mb-6">
           <div>
-            <span className="text-[11px] font-mono text-[#8B5CF6] uppercase tracking-wider block">
+            <span className="text-[11px] font-mono text-[#B9E4E8] uppercase tracking-wider block">
               PATTERN-BASED PROBLEM SOLVING
             </span>
-            <h3 className="text-lg font-bold text-white mt-1">Core Algorithm & Data Structure Disciplines</h3>
+            <h3 className="text-lg font-bold text-[#EEEEEE] mt-1">Core Algorithm & Data Structure Disciplines</h3>
           </div>
           <span className="text-xs font-mono text-zinc-500">
             {profileData.dsaTopics.length} Focus Areas
@@ -152,7 +152,7 @@ export default function HowIThink() {
           {profileData.dsaTopics.map((topic) => (
             <span
               key={topic}
-              className="px-3.5 py-1.5 rounded-lg text-xs font-mono bg-zinc-900 border border-white/10 text-zinc-300 hover:text-white hover:border-[#8B5CF6] transition-colors"
+              className="px-3.5 py-1.5 rounded-lg text-xs font-mono bg-zinc-900 border border-white/10 text-zinc-300 hover:text-[#B9E4E8] hover:border-[#167D8D] transition-colors"
             >
               {topic}
             </span>

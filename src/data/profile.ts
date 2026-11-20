@@ -18,6 +18,7 @@ export interface ProfileData {
   github: string;
   linkedin: string;
   resumeUrl: string;
+  avatarUrl?: string;
   education: Education;
   focusAreas: string[];
   dsaTopics: string[];
@@ -37,6 +38,7 @@ export const profileData: ProfileData = {
   github: "https://github.com/Vinay019-code",
   linkedin: "https://www.linkedin.com/in/vinay-yadav",
   resumeUrl: "/Vinay_Yadav%20correct_Resume.pdf",
+  avatarUrl: "/profile.jpg",
   education: {
     degree: "Bachelor of Technology (B.Tech)",
     field: "Computer Science & Engineering",

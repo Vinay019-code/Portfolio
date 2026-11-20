@@ -88,8 +88,8 @@ export default function CustomCursor() {
       {/* Center dot */}
       <div
         ref={dotRef}
-        className={`fixed top-0 left-0 -ml-1 -mt-1 h-2 w-2 rounded-full bg-[#8B5CF6] transition-transform duration-150 ${
-          isHovered ? "scale-0" : isPointer ? "scale-150 bg-white" : "scale-100"
+        className={`fixed top-0 left-0 -ml-1 -mt-1 h-2 w-2 rounded-full bg-[#167D8D] transition-transform duration-150 ${
+          isHovered ? "scale-0" : isPointer ? "scale-150 bg-[#EEEEEE]" : "scale-100"
         }`}
       />
       {/* Outer ring */}
@@ -97,16 +97,16 @@ export default function CustomCursor() {
         ref={ringRef}
         className={`fixed top-0 left-0 flex items-center justify-center rounded-full border transition-all duration-200 ${
           isHovered
-            ? "-ml-9 -mt-9 h-18 w-18 border-[#8B5CF6] bg-[#8B5CF6]/20 backdrop-blur-[2px]"
+            ? "-ml-9 -mt-9 h-18 w-18 border-[#167D8D] bg-[#167D8D]/25 backdrop-blur-[2px]"
             : isPointer
-            ? "-ml-5 -mt-5 h-10 w-10 border-white/50 bg-white/5"
+            ? "-ml-5 -mt-5 h-10 w-10 border-[#B9E4E8]/50 bg-[#B9E4E8]/10"
             : "-ml-3 -mt-3 h-6 w-6 border-white/20 bg-transparent"
         }`}
       >
         {isHovered && (
           <span
             ref={textRef}
-            className="text-[10px] font-semibold tracking-widest text-white uppercase"
+            className="text-[10px] font-semibold tracking-widest text-[#EEEEEE] uppercase"
           >
             {cursorText}
           </span>

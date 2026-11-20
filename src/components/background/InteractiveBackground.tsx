@@ -84,7 +84,7 @@ export default function InteractiveBackground() {
         // Draw particle
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(167, 139, 250, ${p.baseAlpha})`;
+        ctx.fillStyle = `rgba(185, 228, 232, ${p.baseAlpha})`;
         ctx.fill();
 
         // Connect nearby particles with subtle faint lines
@@ -95,8 +95,8 @@ export default function InteractiveBackground() {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(139, 92, 246, ${
-              (1 - distNodes / 110) * 0.12
+            ctx.strokeStyle = `rgba(22, 125, 141, ${
+              (1 - distNodes / 110) * 0.2
             })`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
@@ -119,20 +119,20 @@ export default function InteractiveBackground() {
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
       {/* Dark background base */}
-      <div className="absolute inset-0 bg-[#050505]" />
+      <div className="absolute inset-0 bg-[#071B2B]" />
 
       {/* Subtle architectural dot grid */}
       <div
-        className="absolute inset-0 opacity-[0.035]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(rgba(185, 228, 232, 0.5) 1px, transparent 1px)`,
           backgroundSize: "32px 32px",
         }}
       />
 
       {/* Atmospheric radial ambient light */}
-      <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[700px] h-[500px] rounded-full bg-[#8B5CF6]/[0.04] blur-[120px]" />
-      <div className="absolute top-[40%] right-[-10%] w-[500px] h-[400px] rounded-full bg-[#6366F1]/[0.025] blur-[140px]" />
+      <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[700px] h-[500px] rounded-full bg-[#167D8D]/[0.12] blur-[120px]" />
+      <div className="absolute top-[40%] right-[-10%] w-[500px] h-[400px] rounded-full bg-[#B9E4E8]/[0.05] blur-[140px]" />
 
       {/* Interactive canvas layer */}
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full opacity-60" />

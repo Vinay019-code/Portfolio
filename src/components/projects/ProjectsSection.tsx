@@ -45,7 +45,7 @@ export default function ProjectsSection() {
       className="py-24 px-6 sm:px-8 max-w-7xl mx-auto border-t border-white/5 relative"
     >
       {/* Section Tag */}
-      <div className="flex items-center gap-2 mb-4 font-mono text-xs text-[#8B5CF6] tracking-widest uppercase">
+      <div className="flex items-center gap-2 mb-4 font-mono text-xs text-[#B9E4E8] tracking-widest uppercase">
         <span>03</span>
         <span>/</span>
         <span>PRODUCTION WORK</span>
@@ -53,7 +53,7 @@ export default function ProjectsSection() {
 
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
         <div>
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#EEEEEE] leading-tight">
             Featured Systems & Applications
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base mt-2 max-w-xl">
@@ -63,7 +63,7 @@ export default function ProjectsSection() {
         </div>
 
         <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 self-start md:self-auto">
-          <Terminal className="w-3.5 h-3.5 text-emerald-400" />
+          <Terminal className="w-3.5 h-3.5 text-[#B9E4E8]" />
           <span>PRODUCTION-MINDED ARCHITECTURES</span>
         </div>
       </div>

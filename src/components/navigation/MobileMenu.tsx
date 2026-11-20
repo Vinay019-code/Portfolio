@@ -61,11 +61,11 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-50 flex flex-col justify-between bg-[#050505] p-6 sm:p-10 -translate-y-full md:hidden border-b border-white/10"
+      className="fixed inset-0 z-50 flex flex-col justify-between bg-[#071B2B] p-6 sm:p-10 -translate-y-full md:hidden border-b border-white/10"
     >
       {/* Top Bar */}
       <div className="flex items-center justify-between">
-        <span className="font-mono text-sm tracking-widest text-[#8B5CF6] uppercase">
+        <span className="font-mono text-sm tracking-widest text-[#B9E4E8] uppercase">
           VINAY YADAV
         </span>
         <button
@@ -84,10 +84,10 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
             <Link
               href={item.href}
               onClick={onClose}
-              className="group flex items-center justify-between text-2xl font-bold tracking-tight text-white/90 hover:text-[#8B5CF6] transition-colors"
+              className="group flex items-center justify-between text-2xl font-bold tracking-tight text-white/90 hover:text-[#B9E4E8] transition-colors"
             >
               <span>{item.name}</span>
-              <span className="text-xs font-mono text-[#A1A1AA] group-hover:text-[#8B5CF6]">
+              <span className="text-xs font-mono text-zinc-400 group-hover:text-[#B9E4E8]">
                 0{index + 1}
               </span>
             </Link>

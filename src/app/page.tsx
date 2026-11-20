@@ -21,7 +21,7 @@ export default function Home() {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-[#050505] text-[#F5F5F5] selection:bg-[#8B5CF6]/30">
+    <div className="relative min-h-screen bg-[#071B2B] text-[#EEEEEE] selection:bg-[#167D8D]/40 selection:text-white">
       {/* Cinematic Initial Loader */}
       {!loadingComplete && (
         <InitialLoader onComplete={() => setLoadingComplete(true)} />

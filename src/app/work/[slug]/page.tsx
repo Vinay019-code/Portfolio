@@ -41,9 +41,9 @@ export default async function ProjectDetailPage({
   }
 
   return (
-    <div className="min-h-screen bg-[#050505] text-[#F5F5F5] selection:bg-[#8B5CF6]/30">
+    <div className="min-h-screen bg-[#071B2B] text-[#EEEEEE] selection:bg-[#167D8D]/40 selection:text-white">
       {/* Top Breadcrumb Header */}
-      <header className="fixed top-0 left-0 right-0 z-40 bg-[#050505]/80 backdrop-blur-md border-b border-white/10 py-4">
+      <header className="fixed top-0 left-0 right-0 z-40 bg-[#071B2B]/85 backdrop-blur-md border-b border-white/10 py-4">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
           <Link
             href="/#projects"
@@ -53,7 +53,7 @@ export default async function ProjectDetailPage({
             <span>BACK TO OVERVIEW</span>
           </Link>
 
-          <span className="font-mono text-xs text-[#8B5CF6]">
+          <span className="font-mono text-xs text-[#B9E4E8]">
             PROJECT {project.number}
           </span>
         </div>
@@ -64,7 +64,7 @@ export default async function ProjectDetailPage({
         {/* Title & Metadata */}
         <div className="mb-12">
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="px-3 py-1 rounded-full text-xs font-mono bg-[#8B5CF6]/10 text-[#8B5CF6] border border-[#8B5CF6]/20">
+            <span className="px-3 py-1 rounded-full text-xs font-mono bg-[#167D8D]/20 text-[#B9E4E8] border border-[#167D8D]/40">
               {project.category}
             </span>
             <span className="text-xs font-mono text-zinc-500">
@@ -72,7 +72,7 @@ export default async function ProjectDetailPage({
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-white mb-4">
+          <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-[#EEEEEE] mb-4">
             {project.title}
           </h1>
 
@@ -85,14 +85,14 @@ export default async function ProjectDetailPage({
               href={project.links.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900 border border-white/15 text-white font-mono text-xs hover:border-[#8B5CF6] transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900 border border-white/15 text-white font-mono text-xs hover:border-[#167D8D] transition-all"
             >
               <GitHubIcon className="w-4 h-4" />
               <span>Inspect Source on GitHub</span>
               <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
             </a>
 
-            <div className="inline-flex items-center px-4 py-2.5 rounded-xl bg-zinc-950 border border-white/5 text-zinc-400 font-mono text-xs">
+            <div className="inline-flex items-center px-4 py-2.5 rounded-xl bg-[#071B2B] border border-white/5 text-zinc-400 font-mono text-xs">
               Live Demo: Project information available on request.
             </div>
           </div>
@@ -100,7 +100,7 @@ export default async function ProjectDetailPage({
 
         {/* Technologies Grid */}
         <section className="mb-16">
-          <h2 className="text-xs font-mono text-[#8B5CF6] tracking-widest uppercase mb-4">
+          <h2 className="text-xs font-mono text-[#B9E4E8] tracking-widest uppercase mb-4">
             TECHNOLOGY STACK
           </h2>
           <div className="flex flex-wrap gap-2.5">
@@ -117,7 +117,7 @@ export default async function ProjectDetailPage({
 
         {/* Problem & Solution Grid */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <div className="p-6 rounded-2xl bg-zinc-950 border border-white/10">
+          <div className="p-6 rounded-2xl bg-[#071B2B] border border-white/10">
             <div className="flex items-center gap-2 mb-3 text-amber-400 font-mono text-xs uppercase tracking-wider">
               <AlertCircle className="w-4 h-4" />
               <span>The Problem</span>
@@ -127,8 +127,8 @@ export default async function ProjectDetailPage({
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-zinc-950 border border-white/10">
-            <div className="flex items-center gap-2 mb-3 text-emerald-400 font-mono text-xs uppercase tracking-wider">
+          <div className="p-6 rounded-2xl bg-[#071B2B] border border-white/10">
+            <div className="flex items-center gap-2 mb-3 text-[#B9E4E8] font-mono text-xs uppercase tracking-wider">
               <CheckCircle2 className="w-4 h-4" />
               <span>The Solution</span>
             </div>
@@ -141,7 +141,7 @@ export default async function ProjectDetailPage({
         {/* System Architecture Visualization */}
         <section className="mb-16">
           <div className="mb-6">
-            <h2 className="text-xs font-mono text-[#8B5CF6] tracking-widest uppercase mb-2">
+            <h2 className="text-xs font-mono text-[#B9E4E8] tracking-widest uppercase mb-2">
               SYSTEM ARCHITECTURE
             </h2>
             <p className="text-sm text-zinc-400">
@@ -157,7 +157,7 @@ export default async function ProjectDetailPage({
 
         {/* Key Features from Resume */}
         <section className="mb-16">
-          <h2 className="text-xs font-mono text-[#8B5CF6] tracking-widest uppercase mb-6">
+          <h2 className="text-xs font-mono text-[#B9E4E8] tracking-widest uppercase mb-6">
             IMPLEMENTED CAPABILITIES & FEATURES
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -166,7 +166,7 @@ export default async function ProjectDetailPage({
                 key={idx}
                 className="p-4 rounded-xl bg-zinc-900/50 border border-white/5 flex items-start gap-3"
               >
-                <span className="font-mono text-xs text-[#8B5CF6] mt-0.5">0{idx + 1}</span>
+                <span className="font-mono text-xs text-[#B9E4E8] mt-0.5">0{idx + 1}</span>
                 <span className="text-sm text-zinc-300 leading-snug">{feature}</span>
               </div>
             ))}
@@ -175,16 +175,16 @@ export default async function ProjectDetailPage({
 
         {/* Engineering Decisions */}
         <section className="mb-16">
-          <h2 className="text-xs font-mono text-[#8B5CF6] tracking-widest uppercase mb-6">
+          <h2 className="text-xs font-mono text-[#B9E4E8] tracking-widest uppercase mb-6">
             ENGINEERING DECISIONS & TRADE-OFFS
           </h2>
           <div className="space-y-4">
             {project.engineeringDecisions.map((decision, idx) => (
               <div
                 key={idx}
-                className="p-5 rounded-xl bg-zinc-950 border border-white/10"
+                className="p-5 rounded-xl bg-[#071B2B] border border-white/10"
               >
-                <h3 className="text-sm font-bold text-white mb-2">{decision.title}</h3>
+                <h3 className="text-sm font-bold text-[#EEEEEE] mb-2">{decision.title}</h3>
                 <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-normal">
                   {decision.description}
                 </p>
@@ -195,7 +195,7 @@ export default async function ProjectDetailPage({
 
         {/* Challenges & Edge Cases */}
         <section className="mb-16">
-          <h2 className="text-xs font-mono text-[#8B5CF6] tracking-widest uppercase mb-6">
+          <h2 className="text-xs font-mono text-[#B9E4E8] tracking-widest uppercase mb-6">
             TECHNICAL CHALLENGES & MITIGATIONS
           </h2>
           <div className="space-y-3">
@@ -224,7 +224,7 @@ export default async function ProjectDetailPage({
             href={project.links.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-mono text-[#8B5CF6] hover:text-[#A78BFA] transition-colors"
+            className="text-xs font-mono text-[#B9E4E8] hover:text-[#EEEEEE] transition-colors"
           >
             GitHub Repository →
           </a>

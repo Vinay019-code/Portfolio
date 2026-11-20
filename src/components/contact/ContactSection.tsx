@@ -35,7 +35,7 @@ export default function ContactSection() {
       id="contact"
       className="py-24 px-6 sm:px-8 max-w-7xl mx-auto border-t border-white/5 relative"
     >
-      <div className="flex items-center gap-2 mb-4 font-mono text-xs text-[#8B5CF6] tracking-widest uppercase">
+      <div className="flex items-center gap-2 mb-4 font-mono text-xs text-[#B9E4E8] tracking-widest uppercase">
         <span>07</span>
         <span>/</span>
         <span>INITIATE CONTACT</span>
@@ -44,7 +44,7 @@ export default function ContactSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         {/* Left Column: Direct Credentials & Links */}
         <div className="lg:col-span-6 space-y-6">
-          <h2 className="text-4xl sm:text-6xl font-black tracking-tight text-white leading-tight">
+          <h2 className="text-4xl sm:text-6xl font-black tracking-tight text-[#EEEEEE] leading-tight">
             Let&apos;s build something useful.
           </h2>
 
@@ -55,9 +55,9 @@ export default function ContactSection() {
 
           <div className="space-y-4 pt-4">
             {/* Email Card with click-to-copy */}
-            <div className="p-4 rounded-xl border border-white/10 bg-zinc-950/60 flex items-center justify-between gap-4">
+            <div className="p-4 rounded-xl border border-white/10 bg-[#071B2B]/60 flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-lg bg-zinc-900 border border-white/10 text-[#8B5CF6]">
+                <div className="p-2.5 rounded-lg bg-zinc-900 border border-white/10 text-[#B9E4E8]">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
@@ -66,7 +66,7 @@ export default function ContactSection() {
                   </span>
                   <a
                     href={`mailto:${profileData.email}`}
-                    className="text-sm font-semibold text-white hover:text-[#8B5CF6] transition-colors"
+                    className="text-sm font-semibold text-[#EEEEEE] hover:text-[#B9E4E8] transition-colors"
                   >
                     {profileData.email}
                   </a>
@@ -79,13 +79,13 @@ export default function ContactSection() {
                 title="Copy Email"
                 aria-label="Copy Email address"
               >
-                {isCopied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                {isCopied ? <Check className="w-4 h-4 text-[#B9E4E8]" /> : <Copy className="w-4 h-4" />}
               </button>
             </div>
 
             {/* Phone Card */}
-            <div className="p-4 rounded-xl border border-white/10 bg-zinc-950/60 flex items-center gap-3">
-              <div className="p-2.5 rounded-lg bg-zinc-900 border border-white/10 text-emerald-400">
+            <div className="p-4 rounded-xl border border-white/10 bg-[#071B2B]/60 flex items-center gap-3">
+              <div className="p-2.5 rounded-lg bg-zinc-900 border border-white/10 text-[#167D8D]">
                 <Phone className="w-4 h-4" />
               </div>
               <div>
@@ -94,7 +94,7 @@ export default function ContactSection() {
                 </span>
                 <a
                   href={`tel:${profileData.phone}`}
-                  className="text-sm font-semibold text-white hover:text-emerald-400 transition-colors"
+                  className="text-sm font-semibold text-[#EEEEEE] hover:text-[#B9E4E8] transition-colors"
                 >
                   {profileData.phone}
                 </a>
@@ -102,15 +102,15 @@ export default function ContactSection() {
             </div>
 
             {/* Location Card */}
-            <div className="p-4 rounded-xl border border-white/10 bg-zinc-950/60 flex items-center gap-3">
-              <div className="p-2.5 rounded-lg bg-zinc-900 border border-white/10 text-cyan-400">
+            <div className="p-4 rounded-xl border border-white/10 bg-[#071B2B]/60 flex items-center gap-3">
+              <div className="p-2.5 rounded-lg bg-zinc-900 border border-white/10 text-[#B9E4E8]">
                 <MapPin className="w-4 h-4" />
               </div>
               <div>
                 <span className="text-[11px] font-mono text-zinc-500 uppercase block">
                   Location
                 </span>
-                <span className="text-sm font-semibold text-white">
+                <span className="text-sm font-semibold text-[#EEEEEE]">
                   {profileData.location}
                 </span>
               </div>
@@ -123,7 +123,7 @@ export default function ContactSection() {
               href={profileData.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-white/10 text-xs font-mono text-zinc-300 hover:text-white hover:border-[#8B5CF6] transition-colors"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-white/10 text-xs font-mono text-zinc-300 hover:text-[#B9E4E8] hover:border-[#167D8D] transition-colors"
             >
               <GitHubIcon className="w-4 h-4" />
               <span>GitHub</span>
@@ -132,7 +132,7 @@ export default function ContactSection() {
               href={profileData.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-white/10 text-xs font-mono text-zinc-300 hover:text-white hover:border-[#8B5CF6] transition-colors"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 border border-white/10 text-xs font-mono text-zinc-300 hover:text-[#B9E4E8] hover:border-[#167D8D] transition-colors"
             >
               <LinkedInIcon className="w-4 h-4" />
               <span>LinkedIn</span>
@@ -142,16 +142,16 @@ export default function ContactSection() {
 
         {/* Right Column: Contact Message Form */}
         <div className="lg:col-span-6">
-          <div className="p-6 sm:p-8 rounded-2xl border border-white/10 bg-zinc-950/60 backdrop-blur-md">
-            <h3 className="text-lg font-bold text-white mb-2">Send a Direct Message</h3>
+          <div className="p-6 sm:p-8 rounded-2xl border border-white/10 bg-[#071B2B]/60 backdrop-blur-md">
+            <h3 className="text-lg font-bold text-[#EEEEEE] mb-2">Send a Direct Message</h3>
             <p className="text-xs text-zinc-400 mb-6 font-mono">
               Generates an email draft directly addressing Vinay Yadav.
             </p>
 
             {submitted ? (
-              <div className="p-6 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-center space-y-3">
-                <CheckCircle2 className="w-8 h-8 text-emerald-400 mx-auto" />
-                <h4 className="text-base font-bold text-white">Email Draft Dispatched</h4>
+              <div className="p-6 rounded-xl bg-[#167D8D]/20 border border-[#167D8D]/40 text-center space-y-3">
+                <CheckCircle2 className="w-8 h-8 text-[#B9E4E8] mx-auto" />
+                <h4 className="text-base font-bold text-[#EEEEEE]">Email Draft Dispatched</h4>
                 <p className="text-xs text-zinc-300">
                   Your email client has been prepared with your message to{" "}
                   <strong className="text-white">{profileData.email}</strong>.
@@ -175,7 +175,7 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Alex Morgan"
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-white/10 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-[#8B5CF6] transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-white/10 text-[#EEEEEE] placeholder-zinc-600 text-sm focus:outline-none focus:border-[#167D8D] transition-colors"
                   />
                 </div>
 
@@ -189,7 +189,7 @@ export default function ContactSection() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="alex@company.com"
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-white/10 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-[#8B5CF6] transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-white/10 text-[#EEEEEE] placeholder-zinc-600 text-sm focus:outline-none focus:border-[#167D8D] transition-colors"
                   />
                 </div>
 
@@ -203,15 +203,15 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Hello Vinay, I'd like to talk about an engineering role..."
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-white/10 text-white placeholder-zinc-600 text-sm focus:outline-none focus:border-[#8B5CF6] transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-white/10 text-[#EEEEEE] placeholder-zinc-600 text-sm focus:outline-none focus:border-[#167D8D] transition-colors resize-none"
                   />
                 </div>
 
                 <MagneticButton
                   type="submit"
-                  className="w-full py-3.5 px-6 rounded-xl font-semibold text-sm text-black bg-white hover:bg-zinc-200 transition-colors shadow-lg flex items-center justify-center gap-2"
+                  className="w-full py-3.5 px-6 rounded-xl font-semibold text-sm text-[#071B2B] bg-[#EEEEEE] hover:bg-[#B9E4E8] transition-colors shadow-lg flex items-center justify-center gap-2"
                 >
-                  <Send className="w-4 h-4 text-black" />
+                  <Send className="w-4 h-4 text-[#071B2B]" />
                   <span>Send Message</span>
                 </MagneticButton>
               </form>

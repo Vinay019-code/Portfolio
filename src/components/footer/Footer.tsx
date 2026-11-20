@@ -12,10 +12,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-white/10 bg-zinc-950/80 py-12 px-6 sm:px-8">
+    <footer className="border-t border-white/10 bg-[#071B2B]/90 py-12 px-6 sm:px-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         <div>
-          <span className="font-bold tracking-tight text-white text-base">
+          <span className="font-bold tracking-tight text-[#EEEEEE] text-base">
             VINAY YADAV
           </span>
           <p className="text-xs text-zinc-400 mt-1 font-mono">
@@ -28,7 +28,7 @@ export default function Footer() {
             href={profileData.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white transition-colors flex items-center gap-1.5"
+            className="hover:text-[#B9E4E8] transition-colors flex items-center gap-1.5"
           >
             <GitHubIcon className="w-3.5 h-3.5" />
             <span>GitHub</span>
@@ -38,7 +38,7 @@ export default function Footer() {
             href={profileData.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white transition-colors flex items-center gap-1.5"
+            className="hover:text-[#B9E4E8] transition-colors flex items-center gap-1.5"
           >
             <LinkedInIcon className="w-3.5 h-3.5" />
             <span>LinkedIn</span>
@@ -46,7 +46,7 @@ export default function Footer() {
 
           <a
             href={`mailto:${profileData.email}`}
-            className="hover:text-white transition-colors flex items-center gap-1.5"
+            className="hover:text-[#B9E4E8] transition-colors flex items-center gap-1.5"
           >
             <Mail className="w-3.5 h-3.5" />
             <span>Email</span>
@@ -57,7 +57,7 @@ export default function Footer() {
           <span>&copy; 2026 Vinay Yadav</span>
           <button
             onClick={scrollToTop}
-            className="p-2 rounded-lg bg-zinc-900 border border-white/10 text-zinc-400 hover:text-white transition-colors"
+            className="p-2 rounded-lg bg-zinc-900 border border-white/10 text-zinc-400 hover:text-white hover:border-[#167D8D] transition-colors"
             title="Scroll to top"
             aria-label="Scroll to top of page"
           >

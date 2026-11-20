@@ -83,7 +83,7 @@ export default function Hero() {
         <div className="lg:col-span-7 flex flex-col justify-center">
           {/* Eyebrow / Tag */}
           <div ref={roleRef} className="flex items-center gap-3 mb-4">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium text-[#8B5CF6] bg-[#8B5CF6]/10 border border-[#8B5CF6]/20">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium text-[#B9E4E8] bg-[#167D8D]/20 border border-[#167D8D]/40">
               <Sparkles className="w-3 h-3" />
               SOFTWARE ENGINEER • FULL-STACK
             </span>
@@ -92,7 +92,7 @@ export default function Hero() {
           {/* Main Huge Typography Headline */}
           <h1
             ref={headlineRef}
-            className="text-5xl sm:text-7xl xl:text-8xl font-black tracking-tight text-white uppercase leading-[0.95] mb-6"
+            className="text-5xl sm:text-7xl xl:text-8xl font-black tracking-tight text-[#EEEEEE] uppercase leading-[0.95] mb-6"
           >
             <div className="overflow-hidden">
               <span className="hero-line block text-zinc-100">VINAY</span>
@@ -119,9 +119,9 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div ref={ctaRef} className="flex flex-wrap items-center gap-4 mb-8">
             <a href="#projects">
-              <MagneticButton className="px-7 py-3.5 rounded-xl font-medium text-sm text-black bg-white hover:bg-zinc-200 transition-colors shadow-lg shadow-white/5 flex items-center gap-2">
+              <MagneticButton className="px-7 py-3.5 rounded-xl font-medium text-sm text-[#071B2B] bg-[#EEEEEE] hover:bg-[#B9E4E8] transition-colors shadow-lg shadow-white/5 flex items-center gap-2">
                 <span>View Work</span>
-                <ArrowDown className="w-4 h-4 text-black" />
+                <ArrowDown className="w-4 h-4 text-[#071B2B]" />
               </MagneticButton>
             </a>
 
@@ -129,8 +129,8 @@ export default function Hero() {
               href={profileData.resumeUrl}
               download="Vinay_Yadav_Resume.pdf"
             >
-              <MagneticButton className="px-6 py-3.5 rounded-xl font-medium text-sm text-zinc-200 bg-zinc-900 border border-white/10 hover:border-[#8B5CF6] hover:text-white transition-all flex items-center gap-2">
-                <Download className="w-4 h-4 text-[#8B5CF6]" />
+              <MagneticButton className="px-6 py-3.5 rounded-xl font-medium text-sm text-zinc-200 bg-zinc-900 border border-white/10 hover:border-[#167D8D] hover:text-[#EEEEEE] transition-all flex items-center gap-2">
+                <Download className="w-4 h-4 text-[#B9E4E8]" />
                 <span>Download Resume</span>
               </MagneticButton>
             </a>

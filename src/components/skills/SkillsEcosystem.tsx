@@ -42,13 +42,13 @@ export default function SkillsEcosystem() {
   }, [activeCategory, prefersReduced]);
 
   const categoryIcons: Record<string, React.ReactNode> = {
-    languages: <Binary className="w-4 h-4 text-emerald-400" />,
-    frontend: <Layers className="w-4 h-4 text-[#8B5CF6]" />,
-    backend: <Cpu className="w-4 h-4 text-cyan-400" />,
-    database: <Database className="w-4 h-4 text-amber-400" />,
-    core: <Shield className="w-4 h-4 text-rose-400" />,
-    tools: <Wrench className="w-4 h-4 text-blue-400" />,
-    "data-science": <Network className="w-4 h-4 text-violet-400" />,
+    languages: <Binary className="w-4 h-4 text-[#B9E4E8]" />,
+    frontend: <Layers className="w-4 h-4 text-[#167D8D]" />,
+    backend: <Cpu className="w-4 h-4 text-[#B9E4E8]" />,
+    database: <Database className="w-4 h-4 text-[#167D8D]" />,
+    core: <Shield className="w-4 h-4 text-[#B9E4E8]" />,
+    tools: <Wrench className="w-4 h-4 text-[#167D8D]" />,
+    "data-science": <Network className="w-4 h-4 text-[#B9E4E8]" />,
   };
 
   const filteredCategories =
@@ -63,7 +63,7 @@ export default function SkillsEcosystem() {
       className="py-24 px-6 sm:px-8 max-w-7xl mx-auto border-t border-white/5 relative"
     >
       {/* Section Tag */}
-      <div className="flex items-center gap-2 mb-4 font-mono text-xs text-[#8B5CF6] tracking-widest uppercase">
+      <div className="flex items-center gap-2 mb-4 font-mono text-xs text-[#B9E4E8] tracking-widest uppercase">
         <span>02</span>
         <span>/</span>
         <span>TECHNICAL ECOSYSTEM</span>
@@ -71,7 +71,7 @@ export default function SkillsEcosystem() {
 
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div>
-          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white">
+          <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-[#EEEEEE]">
             Ecosystem & Stack
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base mt-2 max-w-xl">
@@ -81,8 +81,8 @@ export default function SkillsEcosystem() {
         </div>
 
         {/* Central Hub Badge */}
-        <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900/80 border border-[#8B5CF6]/30 self-start md:self-auto shadow-lg shadow-[#8B5CF6]/5">
-          <span className="w-2 h-2 rounded-full bg-[#8B5CF6] animate-ping" />
+        <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900/80 border border-[#167D8D]/40 self-start md:self-auto shadow-lg shadow-[#167D8D]/10">
+          <span className="w-2 h-2 rounded-full bg-[#B9E4E8] animate-ping" />
           <span className="font-mono text-xs font-semibold text-zinc-200">
             FULL-STACK ARCHITECTURE HUB
           </span>
@@ -95,7 +95,7 @@ export default function SkillsEcosystem() {
           onClick={() => setActiveCategory("all")}
           className={`px-4 py-2 rounded-lg text-xs font-mono transition-all ${
             activeCategory === "all"
-              ? "bg-white text-black font-semibold shadow-md"
+              ? "bg-[#EEEEEE] text-[#071B2B] font-semibold shadow-md"
               : "bg-zinc-900/70 text-zinc-400 hover:text-white hover:bg-zinc-800"
           }`}
         >
@@ -107,7 +107,7 @@ export default function SkillsEcosystem() {
             onClick={() => setActiveCategory(cat.id)}
             className={`px-4 py-2 rounded-lg text-xs font-mono flex items-center gap-2 transition-all ${
               activeCategory === cat.id
-                ? "bg-[#8B5CF6] text-white font-semibold shadow-md shadow-[#8B5CF6]/20"
+                ? "bg-[#167D8D] text-[#EEEEEE] font-semibold shadow-md shadow-[#167D8D]/30"
                 : "bg-zinc-900/70 text-zinc-400 hover:text-white hover:bg-zinc-800"
             }`}
           >
@@ -125,14 +125,14 @@ export default function SkillsEcosystem() {
         {filteredCategories.map((cat) => (
           <div
             key={cat.id}
-            className="rounded-xl border border-white/10 bg-zinc-950/50 p-6 backdrop-blur-sm hover:border-white/20 transition-all group"
+            className="rounded-xl border border-white/10 bg-[#071B2B]/60 p-6 backdrop-blur-sm hover:border-[#167D8D]/40 transition-all group"
           >
             <div className="flex items-center justify-between pb-4 border-b border-white/5 mb-4">
               <div className="flex items-center gap-2.5">
                 <div className="p-2 rounded-lg bg-zinc-900 border border-white/10">
                   {categoryIcons[cat.id]}
                 </div>
-                <h3 className="font-mono text-sm font-bold text-white tracking-wider uppercase">
+                <h3 className="font-mono text-sm font-bold text-[#EEEEEE] tracking-wider uppercase">
                   {cat.name}
                 </h3>
               </div>
@@ -155,7 +155,7 @@ export default function SkillsEcosystem() {
                   onMouseLeave={() => setHoveredSkill(null)}
                   className={`px-3 py-1.5 rounded-lg text-xs font-mono cursor-pointer transition-all border ${
                     skill.highlight
-                      ? "bg-zinc-900 text-zinc-100 border-white/15 hover:border-[#8B5CF6] hover:bg-[#8B5CF6]/10 hover:text-white"
+                      ? "bg-zinc-900 text-zinc-100 border-white/15 hover:border-[#167D8D] hover:bg-[#167D8D]/20 hover:text-[#EEEEEE]"
                       : "bg-zinc-900/50 text-zinc-400 border-white/5 hover:border-white/20 hover:text-zinc-200"
                   }`}
                 >
@@ -170,12 +170,12 @@ export default function SkillsEcosystem() {
       {/* Dynamic Skill Inspector Footer */}
       <div className="mt-8 p-4 rounded-xl border border-white/10 bg-zinc-900/40 backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono">
         <div className="flex items-center gap-2 text-zinc-400">
-          <Sparkles className="w-4 h-4 text-[#8B5CF6]" />
+          <Sparkles className="w-4 h-4 text-[#B9E4E8]" />
           <span>
             {hoveredSkill ? (
               <>
-                <strong className="text-white">{hoveredSkill.name}</strong>{" "}
-                <span className="text-[#8B5CF6]">({hoveredSkill.category})</span>:{" "}
+                <strong className="text-[#EEEEEE]">{hoveredSkill.name}</strong>{" "}
+                <span className="text-[#B9E4E8]">({hoveredSkill.category})</span>:{" "}
                 {hoveredSkill.description}
               </>
             ) : (

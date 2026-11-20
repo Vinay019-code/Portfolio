@@ -71,13 +71,13 @@ export default function InitialLoader({ onComplete }: InitialLoaderProps) {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#050505] text-[#F5F5F5]"
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#071B2B] text-[#EEEEEE]"
     >
       <div className="relative flex flex-col items-center text-center">
         {/* Editorial Subtitle */}
         <p
           ref={subtextRef}
-          className="mb-3 text-[11px] font-mono tracking-[0.28em] text-[#8B5CF6] uppercase"
+          className="mb-3 text-[11px] font-mono tracking-[0.28em] text-[#B9E4E8] uppercase"
         >
           ENGINEERING ARCHITECTURE
         </p>
@@ -85,7 +85,7 @@ export default function InitialLoader({ onComplete }: InitialLoaderProps) {
         {/* Large Name Header */}
         <h1
           ref={textRef}
-          className="text-4xl sm:text-6xl font-black tracking-tight text-white mb-6 uppercase"
+          className="text-4xl sm:text-6xl font-black tracking-tight text-[#EEEEEE] mb-6 uppercase"
         >
           VINAY YADAV
         </h1>
@@ -94,13 +94,13 @@ export default function InitialLoader({ onComplete }: InitialLoaderProps) {
         <div className="w-64 sm:w-80 h-1 bg-white/10 rounded-full overflow-hidden mb-3 relative">
           <div
             ref={barRef}
-            className="h-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] transition-all duration-75"
+            className="h-full bg-gradient-to-r from-[#167D8D] to-[#B9E4E8] transition-all duration-75"
             style={{ width: `${percent}%` }}
           />
         </div>
 
         {/* Numeric Counter */}
-        <div className="flex justify-between w-64 sm:w-80 text-[11px] font-mono text-[#A1A1AA]">
+        <div className="flex justify-between w-64 sm:w-80 text-[11px] font-mono text-zinc-400">
           <span>SYSTEM_INITIALIZE</span>
           <span ref={counterRef}>{percent}%</span>
         </div>

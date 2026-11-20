@@ -44,7 +44,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "py-3 bg-[#050505]/80 backdrop-blur-md border-b border-white/[0.08] shadow-lg shadow-black/40"
+            ? "py-3 bg-[#071B2B]/85 backdrop-blur-md border-b border-white/[0.08] shadow-lg shadow-black/40"
             : "py-6 bg-transparent"
         }`}
       >
@@ -55,7 +55,7 @@ export default function Navbar() {
             className="group flex items-center gap-3 text-white focus:outline-none"
             aria-label="Vinay Yadav - Home"
           >
-            <div className="w-8 h-8 rounded-lg bg-zinc-900 border border-white/10 flex items-center justify-center font-mono text-sm font-bold text-white group-hover:border-[#8B5CF6] transition-colors">
+            <div className="w-8 h-8 rounded-lg bg-zinc-900 border border-white/10 flex items-center justify-center font-mono text-sm font-bold text-white group-hover:border-[#167D8D] transition-colors">
               VY
             </div>
             <div className="flex flex-col">
@@ -63,14 +63,14 @@ export default function Navbar() {
                 VINAY YADAV
               </span>
               <span className="text-[10px] font-mono text-zinc-400 flex items-center gap-1.5">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#B9E4E8] animate-pulse" />
                 AVAILABLE FOR ROLES
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 bg-zinc-950/60 p-1.5 rounded-full border border-white/10 backdrop-blur-sm">
+          <nav className="hidden md:flex items-center gap-1 bg-[#071B2B]/70 p-1.5 rounded-full border border-white/10 backdrop-blur-sm">
             {NAV_LINKS.map((link) => {
               const isActive = activeSection === link.href.substring(1);
               return (
@@ -79,13 +79,13 @@ export default function Navbar() {
                   href={link.href}
                   className={`relative px-4 py-1.5 text-xs font-medium rounded-full transition-colors duration-200 ${
                     isActive
-                      ? "text-white bg-white/10 font-semibold"
+                      ? "text-[#EEEEEE] bg-white/10 font-semibold"
                       : "text-zinc-400 hover:text-white hover:bg-white/5"
                   }`}
                 >
                   {link.name}
                   {isActive && (
-                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#8B5CF6]" />
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#B9E4E8]" />
                   )}
                 </Link>
               );
@@ -97,9 +97,9 @@ export default function Navbar() {
             <a
               href={profileData.resumeUrl}
               download="Vinay_Yadav_Resume.pdf"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium text-zinc-200 bg-zinc-900/90 border border-white/15 hover:border-[#8B5CF6] hover:text-white transition-all shadow-sm"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium text-zinc-200 bg-zinc-900/90 border border-white/15 hover:border-[#167D8D] hover:text-white transition-all shadow-sm"
             >
-              <Download className="w-3.5 h-3.5 text-[#8B5CF6]" />
+              <Download className="w-3.5 h-3.5 text-[#B9E4E8]" />
               <span>Resume</span>
             </a>
           </div>
