@@ -127,7 +127,6 @@ npm run start
 All project information, skills, educational milestones, and contact channels are strictly aligned with Vinay Yadav's official resume. No fabricated metrics, fictional users, or unverified claims are present on the website.
 
 - **Email**: vinayyadav00190@gmail.com
-- **Phone**: +91-6397157910
 - **Location**: India
 - **GitHub**: [github.com/Vinay019-code](https://github.com/Vinay019-code)
 - **LinkedIn**: [linkedin.com/in/vinay-yadav](https://www.linkedin.com/in/vinay-yadav)
